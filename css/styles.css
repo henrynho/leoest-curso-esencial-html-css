@@ -1,0 +1,312 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+@font-face {
+    font-family: charter;
+    src: url('/fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: charter;
+    src: url('/fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: charter;
+    src: url('/fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: charter;
+    src: url('/fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+:root{
+    font-size: 17px;
+    --black: #000000;
+    --blackFondo: #251f24;
+    --gray20: #3A3539;
+    --gray10: #A5A3A5;
+    --whitef: #ffffff;
+    --blue: #157EFB;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    color: var(--whitef);
+    background: var(--blackFondo); 
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    /* font-family: charter; */
+}
+a {
+       color: var(--whitef);
+ }
+header{
+    margin-block-start: 20px;
+    font-size: 14px;
+    /* inline-size: 188px; */
+    color: var(--gray10);
+    /* position: absolute; */
+    /* top: 64px;
+    left: -232px; */
+    /* inset-block-start: 40px;
+    inset-inline-start: -308px; */
+    /* z-index: 1; */
+}
+nav details summary {
+  font-weight: bold;
+  color: var(--whitef);
+}
+
+header li{
+    margin-block-end: 16px;
+}
+header a{
+    color: var(--gray10);
+    text-decoration: none;
+}
+header a:hover{
+    color: var(--whitef);
+}
+
+nav details summary{
+    font-weight: bold;
+}
+h1 {
+    font-size: 40px;
+    /* font-size: 4em; */
+    /* font-size: 50px; */
+    /* margin-top: 64px;
+    margin-bottom: 16px; */
+    margin-block-start: 64px;
+    margin-block-end: 16px;
+    /* font-weight: bold; */
+ }
+
+h2{
+    /* font-size: 40px; */
+    font-size: 2em;
+    margin-block: 40px;
+}
+h3{
+    /* font-size: 32px; */
+    font-size: 1.5em;
+    font-weight: 600;
+     /* margin-top: 16px;
+     margin-bottom: 24px; */
+     margin-block: 16px;
+     position:sticky;
+     top:0;
+     background: var(--blackFondo);
+     color: var(--whitef);
+}
+.section-content {
+    margin-top: 164;
+}
+.section-content:first-of-type{
+    margin: 0;
+}
+.section-content ol li{
+    line-height: 24px;
+}
+.section-content ul li{
+    margin-bottom: 16px;
+}
+/* .section-content + hr{
+    display: none;
+} */
+.section-content img{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+}
+.section-content{
+    counter-reset: titleList;
+}
+.section-content h3{
+    counter-increment: titleList;
+    padding-bottom: 8px;
+}
+.section-content h3::before{
+    content: counter(titleList, decimal) '. ';
+}
+.section-content h3::after{
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: var(--whitef);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+h3::before{
+    content: '-';
+}
+h3::after{
+    content: '';
+    width: 32px;
+    height: 3px;
+    background: var(--whitef);
+    display: inline-block;
+}
+pre{
+    background: var(--gray20);
+    padding: 40px;
+   overflow: auto;
+   border-radius: 8px;
+   border-block-start-color: blue;
+   border: 10px solid #5551ff;
+   box-shadow: -10px 10px 0 0 #abaaf6;
+}
+
+p{
+    color: var(--gray10);
+}
+blockquote{
+    /* margin: 32px 0; */
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    /* padding: 24px; */
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+    background: var(--gray20);
+    line-height: 24px;
+    font-family: 'Nunito';
+    border-radius: 8px;
+}
+blockquote p{
+    color: var(--whitef);
+}
+blockquote span::before{
+    content: '- ';
+}
+.header{
+    /* position: sticky; */
+    /* top: 0; */
+    /* inset-block-start:-45px ; */
+}
+.header-content{
+    /* position: relative;
+    inset-block-start: 25px; */
+    padding-inline: 20px;
+}
+
+.wrapper{
+     /* width: 902px; */
+     max-inline-size: 902px;
+     margin: auto;
+    }
+.main-content{
+    padding-inline: 16px;
+}
+.hero{
+    background-image: linear-gradient(108deg, #314755 27%, #26a0da 86%);
+    /* height:350px; */
+    block-size: 50px;
+}
+.slider {
+  /* border: 1px solid red; */
+}
+
+.slider-container {
+    /* block-size: 100px; */
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+    border-radius: 8px;
+    border-block-start-color: blue;
+    border: 10px solid #6f1374;
+    box-shadow: -10px 10px 0 0 #abaaf6;
+  /* border: 1px solid purple; */
+}
+.video {
+  margin: 0;
+  /* border: 1px solid blue; */
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  /* border: 1px solid yellow; */
+  text-align: center;
+  margin-block-start: 10px;
+  line-height: 3;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.form input{
+    inline-size: 100%;
+    border: 1px solid var(--whitef);
+    background:var(--blackFondo);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--whitef);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+}
+
+form input[type="submit"]{
+    background: #157EFB;
+    border: none;
+}
+
+.form input::-webkit-input-placeholder{
+    color: var(--whitef);
+}
+.bottom{
+    cursor: pointer;
+}
+.bottom:hover{
+    color: var(--gray10);
+}
+
+
+@media screen and (min-width: 1366px){
+    .hero {
+    block-size: 350px;
+    }
+   .header{
+    position: sticky;
+    inset-block-start:-45px ;
+    
+    } 
+    .header-content{
+        position: relative;
+        inset-block-start: 65px;
+    }
+    header{
+        inline-size: 188px;
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+    }
+    h1{
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+}
